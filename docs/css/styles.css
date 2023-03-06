@@ -1,0 +1,202 @@
+﻿@import url('fonts.css');
+@import url('colors.css');
+
+body {
+	/* Hintergrundbild */
+	background-image: url(../images/hintergrund.png); 
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;  
+	background-attachment: fixed;
+	/* Bootstrap overdrive */
+	font-family: Poppins; 
+	font-weight: 200; 
+}
+
+.darkerBackgroundImage {
+	background-color: var(--ourLightTransparentBlack);
+}
+
+.contentSection {
+	/* Section bekommt wenn nötig eigenen Scrollbalken */
+	overflow: auto;
+	/* Hintergrungbild abdunkeln */
+	color: var(--ourColor2);  
+}
+
+.contentSectionRezept{   
+	background-color: #f2f2f2;  
+}
+
+.contentHeader, .contentFooter {
+	/* Erstmal weisser Text */
+	/* Hintergrungbild abdunkeln */
+	background-color: var(--ourMediumTransparentBlack);
+}
+
+/* Die Kühe */
+.emotionContent {
+	width: 27rem; 
+	/* Feste Position am unteren linken Rand des Bildschirms */
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+}
+
+/* Der Pfeil */
+.animatedHint {
+	width: 27rem;
+	/* Feste Position am rechten oberen Rand des Bildschirms */
+	position: absolute;
+	top: 5rem;
+	right: 2rem;
+	opacity: 0; 
+}
+
+.navbar{
+	padding-bottom: 0; 
+}
+
+.Aus {
+	display: none; 
+}
+
+.An {
+	display: block; 
+}
+
+.animatedHintOn { 
+	transition-duration: 1s; 
+	opacity: 1; 
+}
+
+.animatedHintOff {
+	transition-duration: 1s;
+	opacity: 0;
+}
+
+.emotionContentRezept {
+	display: none;
+}
+
+/* Trennstrich für Filter */
+.checkboxDivider {
+	border-top: 1px dashed black; 
+}
+
+.dropdownPosition {
+	bottom:0.15rem; 
+	right:0;
+}
+
+.dropdown {
+	padding-bottom: 0.5rem; 
+	padding-right: 1rem; 
+}
+
+#filterMenu {
+	border-top-left-radius: 0px; 
+	border-top-right-radius: 0px; 
+}
+
+/* Filter dropdown breiter */
+.dropdown-menu {
+	width: 28rem;
+}
+
+.mediumDark {
+	background-color: var(--ourMediumTransparentBlack);
+}
+
+.strongDark {
+	background-color: var(--ourStrongTransparentBlack);
+}
+
+.table, .table-striped > tbody > tr:nth-of-type(odd) > * {
+	color: var(--ourColor2);
+}
+
+.dropdown-toggle::after {
+	display: none; 
+	border: none; 
+}
+	
+/* Rezept Liste */
+#listSection {
+	background-color: #f2f2f2;
+}
+
+.liste-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	overflow-x: hidden;
+}
+
+.left-side {
+	display: flex;
+	flex-basis: 40%;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.left-side img {
+	width: 18rem;
+}
+
+.right-side {
+	display: flex;
+	flex-basis: 60%;
+	width: 100%;
+	height: 100%;
+	padding: 2rem;
+	overflow-y: auto
+}
+
+@media only screen and (max-width: 1000px) {
+	.liste-container {
+		flex-direction: column;
+	}
+} 
+
+.ohneBlocker {
+	color: black;
+	font-size: 1.2rem;
+}
+
+.buch {
+	width: 20rem;
+}
+
+.fixieren {
+	position: absolute;
+	left: 10rem;
+	top: 30%;
+}
+
+.card {
+	border: none;
+	min-width: 23rem;
+	max-width: 25rem;
+}
+
+.card-img-overlay {
+	padding: 0;
+}
+
+.overlayBackground {
+	background: rgba(0,0,0,0.7);
+	padding: 0.5rem;
+}
+
+footer img {
+	width: 2rem;
+}
+
+.mausZeiger {
+	cursor: pointer;
+}
+

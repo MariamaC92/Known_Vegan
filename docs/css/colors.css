@@ -1,0 +1,84 @@
+﻿:root {
+	--ourColor1: #4c5955;
+	--ourColor2: #0D2601;
+	--ourColor3: #27590f;
+	--ourColor4: #e6d5bc;
+	--ourColor5: #f2f2f2;
+	--ourStrongTransparentBlack: rgba(0,0,0,0.85);
+	--ourLightTransparentBlack: rgba(0,0,0,0.4);
+	--ourMediumTransparentBlack: rgba(0,0,0,0.6);
+	--bs-primary: var(--ourColor4);
+	--bs-body-color: var(--ourColor4);
+	/* Nicht veränderte (hoffentlich nicht benutzte) Farbvarianten 
+	--bs-body-color-rgb
+	--bs-body-bg 
+	--bs-body-bg-rgb 
+	--bs-secondary-color 
+	--bs-secondary-color-rgb 
+	--bs-secondary-bg 
+	--bs-secondary-bg-rgb 
+	--bs-tertiary-color 
+	--bs-tertiary-color-rgb 
+	--bs-tertiary-bg 
+	--bs-tertiary-bg-rgb 
+	--bs-emphasis-color 
+	--bs-emphasis-color-rgb 
+	--bs-border-color 
+	--bs-border-color-rgb 
+	--bs-primary-rgb 
+	--bs-primary-bg-subtle 
+	--bs-primary-border-subtle 
+	--bs-primary-text 
+	--bs-success 
+	--bs-success-rgb 
+	--bs-success-bg-subtle 
+	--bs-success-border-subtle 
+	--bs-success-text 
+	--bs-danger 
+	--bs-danger-rgb 
+	--bs-danger-bg-subtle 
+	--bs-danger-border-subtle 
+	--bs-danger-text 
+	--bs-warning 
+	--bs-warning-rgb 
+	--bs-warning-bg-subtle 
+	--bs-warning-border-subtle 
+	--bs-warning-text 
+	--bs-info 
+	--bs-info-rgb 
+	--bs-info-bg-subtle 
+	--bs-info-border-subtle 
+	--bs-info-text 
+	--bs-light 
+	--bs-light-rgb 
+	--bs-light-bg-subtle 
+	--bs-light-border-subtle 
+	--bs-light-text 
+	--bs-dark 
+	--bs-dark-rgb 
+	--bs-dark-bg-subtle 
+	--bs-dark-border-subtle 
+	--bs-dark-text */
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+	background-color: var(--ourColor1) !important;
+	color: var(--ourColor4); 
+	border: none; 
+}
+
+	.btn-primary:hover {
+		color: var(--ourColor5);
+	}
+
+input {
+	background-color: var(--ourColor1) !important;
+	color: var(--ourColor5) !important;
+	border: none; 
+}
+
+	input[type="checkbox"] {
+		background-color: var(--ourColor1) !important;
+		color: var(--ourColor5) !important;
+		border: none;
+	}

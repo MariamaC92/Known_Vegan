@@ -1,0 +1,48 @@
+[
+	{
+		"dishName": "Opas Bratkartoffeln",
+		"descriptionShort": "Lecker, Lecker ...",
+		"descriptionLong": "Aus rohen Kartoffeln. Klassisch und guuuutt .... Ich mag diese Art von Bratkartoffeln gerne, da ich mir das Kochen erspare und die Kartoffeln auch nicht so leicht auseinander fallen wie gekochte Bratkartoffeln.  ",
+		"thumbnail": "opas-bratkartoffeln.webp",
+		"images": [ "opas-bratkartoffeln2.webp", "opas-bratkartoffeln3.webp" ],
+		"numberOfPeople": 2,
+		"ingredients": [
+			{
+				"quantity": 5,
+				"unit": "mtl. gr.",
+				"name": "Kartoffel(n), roh"
+			},
+			{
+				"quantity": 2,
+				"unit": "mtl. gr.",
+				"name": "Zwiebel(n), gewürfelt"
+			},
+			{
+				"quantity": 0,
+				"unit": "n. B.",
+				"name": "Chilipulver"
+			},
+			{
+				"quantity": 0,
+				"unit": "",
+				"name": "Salz und Pfeffer"
+			},
+			{
+				"quantity": 0,
+				"unit": "viel",
+				"name": "Öl"
+			}
+		],
+		"preparationSteps": [
+			"Die Kartoffeln schälen und in gleichmäßig dünne Scheiben schneiden.",
+			"Öl in einer großen Pfanne erhitzen und auf mittlere Stufe zurückschalten. ",
+			"Die Kartoffeln in die Pfanne geben und den Deckel darauf geben. Es ist ganz wichtig, zunächst zugedeckt zu garen, da der Wasseranteil der in den Kartoffeln ist verdampft, und somit die Kartoffeln gart. Es ist auch wichtig, die Temperatur nicht zu hoch zu stellen.",
+			"Nach ca. 15 Minuten den Deckel abnehmen, die Kartoffeln wenden und nochmal für ca. 5 Minuten zudecken.",
+			"Wenn die Kartoffeln gar sind, die Zwiebeln dazugeben und offen bei höherer Temperatur weiter braten. Bei Bedarf noch etwas Öl zufügen. Nun kann auch gewürzt werden. ",
+			"Mehrfach wenden und wenn die Kartoffeln goldbraun und knusprig sind, servieren."
+		],
+		"filterDayTime": [ "Lunch", "Dinner" ],
+		"filterLevel": [ "Easy" ],
+		"filterCountry": [ "DE" ]
+	}
+]

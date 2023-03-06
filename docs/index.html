@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<!-- html UND body (einige Browser brauchen das) bekommen eine Höhe von 100 % -->
+<html lang="de" class="h-100">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>known Vegan - Kuhglückliche Rezepte</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<!-- Einteilung in drei Zeilen, bei voller Bildschirmhöhe  -->
+<body class="h-100">
+  <!-- Erste Zeile von 3: Header (nur so hoch wie der Inhalt ist) -->
+  <div class="cotainer-fluid d-flex flex-column h-100 darkerBackgroundImage">
+    <header class="flex-grow-0 contentHeader">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Ganze Breite -->
+        <div class="container-fluid p-3 d-flex justify-content-start position-relative">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.svg" alt="known Vegan">
+          </a>
+          <h1 class="m-0 fs-2 fw-light fst-italic">known Vegan</h1>
+          <span class="ps-3 fs-5">Kuhglückliche Rezepte</span>
+          <!-- Dropdown nach rechts: ms-auto -->
+          <ul class="navbar-nav ms-auto p-0 position-absolute dropdownPosition">
+            <li class="dropdown">
+              <a class="nav-link fs-5 fw-light dropdown-toggle" href="#" id="filterDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                Was darf es sein? <img src="images/dropdownpfeil.svg" />
+              </a>
+              <div id="filterMenu" class="dropdown-menu dropdown-menu-end mediumDark">
+                <form class="container-fluid pt-2 pb-2">
+                  <div class="row pb-2">
+                    <div class="col">
+                      <div>
+                        <input type="text" placeholder="Suchbegriffe" class="w-100 my-2" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div>
+                        <input type="checkbox" id="filterDayTimeBreakfast" checked />
+                        <label for="filterDayTimeBreakfast"> Frühstück</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterDayTimeLunch" checked />
+                        <label for="filterDayTimeLunch"> Mittag</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterDayTimeDinner" checked />
+                        <label for="filterDayTimeDinner"> Abend</label>
+                      </div>
+                      <div class="checkboxDivider">
+                        <input type="checkbox" id="filterDayTimeAll" checked />
+                        <label for="filterDayTimeAll"> Egal</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div>
+                        <input type="checkbox" id="filterCountryBG" checked />
+                        <label for="filterCountryBG"> Bulgarien</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterCountrySN" checked />
+                        <label for="filterCountrySN"> Senegal</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterCountryDE" checked />
+                        <label for="filterCountryDE"> Deutschland</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterCountryIS" checked />
+                        <label for="filterCountryIS"> Island</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterCountryDK" checked />
+                        <label for="filterCountryDK"> Dänemark</label>
+                      </div>
+                      <div class="checkboxDivider">
+                        <input type="checkbox" id="filterCountryAll" checked />
+                        <label for="filterCountryAll"> International</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div>
+                        <input type="checkbox" id="filterLevelEasy" checked />
+                        <label for="filterLevelEasy"> Einfache Küche</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterLevelHigh" checked />
+                        <label for="filterLevelHigh"> Aufwändige Gerichte</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="filterLevelMedium" checked />
+                        <label for="filterLevelMedium"> Alltagsküche</label>
+                      </div>
+                      <div class="checkboxDivider">
+                        <input type="checkbox" id="filterLevelAll" checked />
+                        <label for="filterLevelAll"> Egal</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button id="filterButton" type="button" class="btn btn-primary my-4">Gerichte anzeigen</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Zweite Zeile von 3: Der Content (Nimm den Rest der Höhe (Bildschirmhöhe-Header-Footer)) -->
+    <section id="mainSection" class="flex-grow-1 contentSection">
+    </section>
+    <section id="listSection" class="flex-grow-1 contentSection contentSectionListe Aus">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-3 d-flex justify-content-center align-items-center flex-column ohneBlocker">
+          <div class="fixieren">
+          <h5 class="text-center">Jetzt im Shop</h5>
+          <img src="images/buch.png" alt="buch" class="buch">
+        </div>
+        </div>
+
+
+      <div class="col-9">
+        <div class="row pt-5">
+          <div class="col d-flex flex-wrap justify-content-around align-items-start gap-5">
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-title">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+            <div class="card text-bg-dark" id="food">
+              <img src="https://images.pexels.com/photos/2862154/pexels-photo-2862154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="rezeptBild">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <div class="overlayBackground">
+                <h5 class="card-title">Name des Gerichts</h5>
+                <p class="card-text">Senegalische Küche</p>
+              </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="rezeptSection" class="flex-grow-1 contentSection contentSectionRezept Aus">
+			<div class="container-fluid">
+				<div class="row p-5">
+					<div class="col">
+						<!--Links oben-->
+						<h3 class="pb-3">Senegalesischer Erdnusseintopf</h3>
+						<p>Maafe ist ein Eintopfgericht, das in vielen westafrikanischen Ländern, darunter Senegal, Mali und Burkina Faso, sehr beliebt ist. Es gibt viele verschiedene Rezepte für Maafe, die je nach Region und Kultur variieren. Die vegane Variante des Gerichts enthält häufig Bohnen oder Erdnüsse  als Eiweißquelle. Maafe besteht typischerweise aus einer Sauce aus  Erdnussbutter und  Tomaten und wird über Reis oder Couscous serviert. Weißkohl, Zwiebeln und Pfeffer sind weitere häufige Zutaten des Gerichts.</p>
+					</div>
+					<div class="col d-flex justify-content-center">
+						<!--links unten-->
+						<img src="https://img.chefkoch-cdn.de/rezepte/4172961668090489/bilder/1481968/crop-642x428/veganer-afrikanischer-erdnusseintopf.jpg" alt="veganer-Erdnusseintopf">
+
+
+					</div>
+				</div>
+				<div class="row p-5">
+
+					<div class="col">
+						<!--rechts oben-->
+						<h3>Zutatenliste für 4 Personen</h3>
+						<table class="table table-striped">
+							<tbody>
+								<tr scope="row">
+
+									<td>2 </td>
+									<td>EL</td>
+									<td>Sojasauce</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>TL</td>
+									<td>Knoblauchpulver</td>
+								</tr>
+
+
+								<tr>
+									<td>2 1/2</td>
+									<td>TL</td>
+									<td>Kreuzkümmelpulver</td>
+								</tr>
+
+								<tr>
+									<td>1</td>
+									<td>TL</td>
+									<td>Paprikapulver,geräuchertes</td>
+								</tr>
+
+								<tr>
+									<td>2</td>
+									<td>EL</td>
+									<td>Olivenöl</td>
+								</tr>
+
+								<tr>
+									<td>500</td>
+									<td>g</td>
+									<td>Fleichersatz(Hähnchenart)</td>
+								</tr>
+
+								<tr>
+									<td>2</td>
+									<td>Becher</td>
+									<td>Basmatireis</td>
+								</tr>
+
+								<tr>
+									<td>4</td>
+									<td>Becher</td>
+									<td>Wasser</td>
+								</tr>
+
+							</tbody>
+						</table>
+
+
+
+					</div>
+					<div class="col">
+						<!--rechts unten-->
+						<h3>Zubereitung</h3>
+						<table class="table">
+							<tbody>
+
+								<tr scope="row">
+
+									<th scope="col">1</th>
+									<td>Für die Marinade Olivenöl, Sojasauce, Knoblauchpulver, Paprikapulver, Salz, Pfeffer und 1 TL vom Kreuzkümmel miteinander verrühren. Filetstücke hinzugeben und gut vermengen. Dann beiseitestellen.</td>
+								</tr>
+
+								<tr>
+									<th scope="col">2</th>
+									<td>
+										Zwiebel, Knoblauchzehen und Paprika putzen und hacken, dann gemeinsam bereitstellen.
+									</td>
+								</tr>
+
+                     <tr>
+                         <th scope="col">3</th>
+                         <td>
+                             Gemüsebrühe abmessen, Erdnussmus abwiegen und Erdnüsse hacken. Petersilie waschen und grob hacken, ebenfalls bereitstellen.
+                         </td>
+                     </tr>
+                    </tbody>  
+                 </table>
+                
+            </div>
+        </div> 
+    </div>    
+  </section> 
+  <!-- Dritte Zeile von 3: Footer (nur so hoch wie der Inhalt ist) -->
+  <footer class="flex-grow-0 container-fluid d-flex  p-3 contentFooter">
+  <div  onclick="listeEinblenden()" class="flex-grow-1 mausZeiger">
+    <img src="./images/zurueckZurListe.svg" alt="ZurückListe"> Zurück zur Übersicht
+  </div>
+    <a href="#" class="nav-link px-3">Impressum</a>
+    <a href="#" class="nav-link px-3">Kontakt</a>
+    <a href="#" class="nav-link px-3">Datenschutz</a>
+    <span class="px-4 small">&copy; 2023 known Vegan GmbH</span>
+  </footer>
+  <!-- Die Kühe (Positionierung siehe CSS) -->
+  <img id="viechers" src="./images/emotion.png" class="emotionContent An">
+  <!-- Der Pfeil (Positionierung siehe CSS) -->
+  <img src="./images/pfeil.png" class="animatedHint" id="hint" draggable="false">
+  <!-- Bootstraps javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="js/knownvegan.js"></script>
+</body>
+</html>
+
